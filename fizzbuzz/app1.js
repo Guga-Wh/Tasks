@@ -1,6 +1,6 @@
 const x = [ ]
 var i 
-for( i=1;i<= 10;i++){
+for( i=1;i<= 100;i++){
     x[i]=i;
 }
 for(j=0;j<x.length;j++){
