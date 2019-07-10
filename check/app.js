@@ -1,6 +1,7 @@
-var type
-var count = 0
+
 const test = (user) =>{
+    var type
+    var count = 0
        type = typeof (user)
             if(type == 'object'){
             console.log(type)
