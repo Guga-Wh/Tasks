@@ -8,10 +8,10 @@ const objectQuantity = (sent) => {
         for(j=0;j<splitarray.length;j++)
             splitarray[j]=change(splitarray[j])
     console.log(splitarray)
-
+            splitarray.sort()
     let set1 = new Set(splitarray)
      set1.forEach(Element =>{
-            if(Element != splitarray[0] && Element != '.'){
+            if( Element != ''){
                 splitarray.forEach(element1 =>{
                     if(Element == element1)
                         count ++
@@ -27,12 +27,12 @@ const objectQuantity = (sent) => {
     for(i=0;i<x.length;i++)
         y.push(x[i])
     for(i=0;i<y.length;i++)
-        if(y[i].charCodeAt() >= 97 && y[i].charCodeAt() <= 122 )
-                z+= y[i]
-    
-    
+        if(y[i].charCodeAt() >= 32 && y[i].charCodeAt() <= 64 ||  y[i].charCodeAt() >=91 &&  y[i].charCodeAt() <=96 ||  y[i].charCodeAt() >=122 && y[i].charCodeAt() <=255 )
+                    continue
+        else z+= y[i]            
+            
     return z
     
     }
-const x = 'windows is bad, is not it?. Linux is good.'
+const x = 'windows სდფას. '
 objectQuantity (x)
